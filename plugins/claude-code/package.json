@@ -1,0 +1,7 @@
+{
+  "name": "row-recall-claude-code",
+  "version": "0.2.0",
+  "description": "ReCall plugin for Claude Code — slash commands and hooks. Declared CommonJS so scripts run with require() regardless of the parent repo's module type.",
+  "private": true,
+  "type": "commonjs"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "row-recall",
+  "version": "0.5.0",
+  "description": "ReCall integration for OpenAI Codex — local version control (checkpoint, rollback, undo, redo) for AI agentic workflows.",
+  "author": "Row AI Technologies",
+  "repository": "https://github.com/rowstudios/recall-releases",
+  "mcpServers": {
+    "recall": {
+      "command": "npx",
+      "args": ["@rowai/mcp-server"]
+    }
+  }
+}

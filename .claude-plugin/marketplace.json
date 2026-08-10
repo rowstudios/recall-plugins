@@ -1,0 +1,15 @@
+{
+  "name": "recall-plugins",
+  "owner": {
+    "name": "Row AI Technologies",
+    "email": "support@rowrecall.com"
+  },
+  "description": "ReCall (rowrecall.com) plugins — agentic local version control for Claude Code: checkpoint, rollback, undo, redo, diff, and branches for AI workflows.",
+  "plugins": [
+    {
+      "name": "row-recall",
+      "source": "./plugins/claude-code",
+      "description": "ReCall agentic version control — 17 MCP tools, 4 slash commands, auto-checkpoint hook."
+    }
+  ]
+}

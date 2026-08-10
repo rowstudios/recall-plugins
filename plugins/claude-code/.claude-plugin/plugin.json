@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "row-recall",
+  "version": "0.5.0",
+  "description": "ReCall integration for Claude Code — checkpoint, rollback, undo, redo, diff, branches, AI session tracking and license status against the local ReCall daemon.",
+  "author": {
+    "name": "Row AI Technologies",
+    "email": "support@rowrecall.com"
+  },
+  "homepage": "https://rowrecall.com",
+  "license": "AGPL-3.0",
+  "keywords": ["recall", "version-control", "checkpoint", "rollback", "mcp"],
+  "repository": "https://github.com/rowstudios/recall-releases",
+  "commands": "./commands/",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/checkpoint-before.js"]
+          }
+        ]
+      }
+    ]
+  },
+  "mcpServers": {
+    "recall": {
+      "command": "npx",
+      "args": ["@rowai/mcp-server"]
+    }
+  }
+}
