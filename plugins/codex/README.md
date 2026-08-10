@@ -25,7 +25,7 @@ command = "npx"
 args = ["-y", "@rowai/mcp-server"]
 ```
 
-Restart Codex. The agent gains 12 tools:
+Restart Codex. The agent gains 17 tools:
 
 | Tool | Purpose |
 |------|---------|
@@ -36,6 +36,10 @@ Restart Codex. The agent gains 12 tools:
 | `diff` | Unified diff between events |
 | `changed_files` | Files changed since the last checkpoint |
 | `status` | Engine stats |
+| `license_status` | Free/Pro plan, events used, days left |
+| `workspace_list` / `workspace_switch` | Multi-workspace management |
+| `ai_sessions` | Recorded AI agent sessions (what each agent touched) |
+| `webhook_status` | Team webhook configuration |
 | `branch` / `branch_switch` / `branch_list` | Parallel branches |
 
 ## Suggested workflow for Codex
